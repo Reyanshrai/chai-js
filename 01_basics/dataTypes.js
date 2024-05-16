@@ -2,27 +2,55 @@
 
 // 7 types : String,Number,Boolean ,Null,undefined,symbole,BigInt
 
-const id = Symbol('123');
-const anid = Symbol('123');
+// const id = Symbol('123');
+// const anid = Symbol('123');
 
-console.log(id===anid);
-
-
-// Reference type (Non Primitive)  : Array,Objects,Functions
+// console.log(id===anid);
 
 
-const heros = ["shaktiman","naagraj",'doga'];
+// // Reference type (Non Primitive)  : Array,Objects,Functions
 
-let ob={
-    name :"Reyanhs",
-    age :22,
+
+// const heros = ["shaktiman","naagraj",'doga'];
+
+// let ob={
+//     name :"Reyanhs",
+//     age :22,
+// }
+
+
+// const myfunction = function(){
+//     console.log("Hello World");
+// }
+
+// console.log(myfunction);
+
+// console.log(typeof null)
+
+
+
+// stack(primitive) ,Heap(non-primitive) memory
+
+let myYoutuvename = "Reyansh";
+
+let anotherName = myYoutuvename;
+
+anotherName = "chai aur js"
+
+console.log(anotherName);
+console.log(myYoutuvename);
+
+
+let userOne={
+    email:'user@gmail.com',
+    upi:"user@ybl"
 }
 
+let userTwo=userOne;
 
-const myfunction = function(){
-    console.log("Hello World");
-}
+// console.log(userTwo)
 
-console.log(myfunction);
+userTwo.email = "reyanhs@gmail.com";
 
-console.log(typeof null)
+console.log(userOne.email);
+console.log(userTwo.email);
