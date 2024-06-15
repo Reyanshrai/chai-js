@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-3</title>
+    <style>
+        body{
+            background-color: black;
+            /* text-align: center;   */
+            color:white;
+            
+        }
+        div{
+            height: 70px;
+            width:200px;
+            /* background-color: black; */
+            position: absolute;
+            top: 40%;
+            left: 40%;
+            border-radius: 30px;
+        }
+        h1{
+            position:absolute;
+            top:30%;
+            left: 39%;
+        }
+        #clock{
+            text-align: center;
+            font-weight: 700;
+            font-size: larger;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Current Time using JS</h1>
+    <div id="clock"></div>
+</body>
+<script>
+    const clock = document.getElementById('clock');
+
+   
+    // clock.innerText = time;
+    // clock.style.color = 'black';
+    // clock.style.padding = '10px';
+
+    setInterval(function(){
+        let date = new Date()
+        clock.innerHTML = date.toLocaleTimeString()
+
+    },1000)
+    
+</script>
+</html>
