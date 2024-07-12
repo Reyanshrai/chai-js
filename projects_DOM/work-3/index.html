@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password copy</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<style>
+ 
+    .text{
+        position: absolute;
+        top: 50%;
+        left:40%;
+        /* transform: translate(30,50); */
+        width: 190px;
+        height: 40px;
+    }
+
+    button{
+        position: relative;
+        top: 51%;
+        left:55%;
+        transform: translate(50,50);
+        /* width:10px; */
+        height: 30px;
+
+    }
+</style>
+<body>
+    <div class="main">
+        <input class="text" type="text">
+        <div>
+            <button class="button"><i class=" copy ri-file-copy-line"></i>copy</button>
+            
+        </div>
+    </div>
+</body>
+<script>
+
+    const copy = document.querySelector('.button')
+    // document.querySelector('.button').addEventListener('click',()=>{
+    //     input.value
+    // })
+
+    const input = document.querySelector("input");
+    var store;
+
+    copy.addEventListener('click',()=>{
+        // store = input.value
+        if(input.value == ""){
+            alert("the input is empty")
+        }else{
+            store = input.value
+            alert("value has copied")
+            input.value = ""
+        }
+        
+    })
+    
+
+    console.log(store)
+</script>
+</html>
